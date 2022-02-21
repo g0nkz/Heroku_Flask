@@ -8,7 +8,7 @@ from security import authenticate, identity
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgresql://syoexbyfglmqgp:028348552a3c7fef44dc55ac1ba1e5a56ce6449275ad006e1a774564e514b225@ec2-52-204-196-4.compute-1.amazonaws.com:5432/d85tgnar1ml2ns', 'sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'dev'
 api = Api(app)
